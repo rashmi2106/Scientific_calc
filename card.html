@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+        }
+        .flex
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        body
+        {
+            height: 100vh;
+            background-image: url("https://img.freepik.com/free-vector/watercolor-stains-abstract-background_23-2149107181.jpg?w=996&t=st=1661882303~exp=1661882903~hmac=843ba09152d1005bfb50fc3e50b451d384b44f459b53ecc92454cf3e5664042a");
+           /*background-color: #ff9a8b;  
+            background-image: linear-gradient(
+            90deg,
+            #ff9a8b 0%,
+            #ff6a88 55%,
+            #ff99ac 100% );*/
+        }
+        .container
+        {
+            position: relative;
+            width: 350px;
+            height: 450px;
+            background-color: white;
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+            box-shadow: 10px 10px 20px
+            rgba(0,0,0,0.37);
+            transition: 1s;
+        }
+        .container:hover
+        {
+            transform: translateX(50%);
+
+        }
+        .container .imgbox
+        {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            transform-origin: left;
+            transform-style: preserve-3d;
+            background-color: black;
+            transition: 1s;
+            box-shadow: 10px 10px 20px
+            rgba(0,0,0,0.37);
+        }
+        .container:hover .imgbox
+        {
+            transform: rotatey(-180deg);
+        }
+        .container .imgbox img
+        {
+           position: absolute;
+           top: 0;
+           bottom: 0;
+           width: 100%;
+           height: 100%;
+           object-fit: cover;
+           transform-style: preserve-3d;
+           backface-visibility: hidden; 
+        }
+        .container .imgbox img:nth-child(2)
+        {
+            transform: rotateY(180deg);
+        }
+        .container .details-container
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .details-container .content
+        {
+            flex-direction: column;
+            padding: 10px;
+        }
+        .details-container .content h1 span
+        {
+            color: red;
+            font-size: 1em;
+        }
+        .details-container .content h1
+        {
+            line-height: 1em;
+            font-weight: 800;
+            text-align: center;
+        }
+        .details-container .content .insta
+        {
+            font-size: 1em;
+            margin: 5px;
+            color: red;
+        }
+        .details-container .content p
+        {
+            text-align: center;
+            font-size: 15px;
+            padding: 10px 20px;
+            color: rgba(0,0,0,0.801);
+        }
+        .details-container .content input
+        {
+            outline: none;
+            border: none;
+            padding: 5px 20px;
+            cursor: pointer;
+            background-color: violet;
+            color: white;
+            font-size: 17px;
+            border-radius: 3px;
+            margin: 5px;
+            transition: 0.3s;
+        }
+        .details-container .content input:nth-child(2)
+        {
+            background-color: transparent;
+            border: 1px solid red;
+            color: black;
+        }
+        .details-container .content input:nth-child(1):hover
+        {
+            background-color: transparent;
+            border: 1px solid red;
+            color: red;
+        }
+        .details-container .content input:nth-child(2):hover
+        {
+            background-color: red;
+            color: white;
+        }
+        .social-media img
+         .social-media a
+        {
+            width: 35px;
+            height: 35px;
+        }
+        .social-media
+        {
+            position: relative;
+            display: flex;
+            margin-top: 22px;
+        }
+        .social-media a
+        {
+            display: inline-block;
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .social-media a:hover
+        {
+            transform: translateY(-17%);
+            background-color: red;
+            transition: 0.3s;
+        }
+        .btn
+        {
+            position: absolute;
+            color: red;
+            top: 370px;
+            left: 80px;
+        }
+        .btn input
+        {
+            color: #d83051;
+        }
+    </style>
+</head>
+<body class="flex">
+    <div class="container">
+        <div class="imgbox">
+            <img src="https://cdn.pixabay.com/photo/2013/02/21/19/10/mother-84628_960_720.jpg" alt="">
+         
+            <img src="https://i.pinimg.com/564x/3b/a7/ce/3ba7ce57f083e1cbccb3ed5c60ca1966.jpg" alt="">
+        </div>
+        <div class="details-container flex">
+            <div class="container flex">
+                <h1>Happy Mother's Day<br>
+                <span>"A mother is she who can take the place of all others
+                but whose place no one can take"</span></h1>
+          </div>
+        </div>
+    </div>
+    
+</body>
+</html>
